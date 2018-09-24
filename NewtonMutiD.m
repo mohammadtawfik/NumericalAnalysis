@@ -24,8 +24,8 @@ clear all
 close all
 clc
 %Initial guesses
-x=0.5
-y=0.5 
+x=0.5;
+y=0.5;
 %Problem parameters
 Epsilon = 1e-3; %Tolerance
 MaxIter =20;      %Maximum number of iterations
@@ -46,15 +46,15 @@ while true
   F2x=-(x-1)*(y-1)/(SQT^3);
   F2y=-(y-1)*(y-1)/(SQT^3)-1/SQT;
   %Filling The Jacobian Matrix
-  JJ=[F1x,F1y;F2x,F2y]
-  J1=inv(JJ)
+  JJ=[F1x,F1y;F2x,F2y];
+  J1=inv(JJ);
   %Solving for the change
-  DeltaX=-J1*[F1;F2]
+  DeltaX=-J1*[F1;F2];
   %Evaluating the new values
-  x=x+DeltaX(1)
-  y=y+DeltaX(2)
+  x=x+DeltaX(1);
+  y=y+DeltaX(2);
   %Evaluating the relative error 
-  Err=DeltaX'*DeltaX
+  Err=DeltaX'*DeltaX;
   %Checking for termination
   if or(and(F1==0,F2==0),or(Err<Epsilon,Counter>MaxIter))
     break
