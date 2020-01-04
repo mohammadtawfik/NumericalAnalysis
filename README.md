@@ -11,4 +11,4 @@ Lecture videos are published on the #AcademyOfKnowledge website
 http://AcademyOfKnowledge.org
 
 With the direct link:
-https://sites.google.com/academyofknowledge.org/theakweb/engineering-and-science/applied-numerical-analysis
+http://Num.AcademyOfKnowedge.org
